@@ -60,18 +60,22 @@ However, the algorithm described above in its raw form is highly unstable. Two t
   | Epsilon decay                       | 0.995 |
 
 
-  #Results
+  # Results
 
-  The best performance was achieved by **Double DQN** where the reward of +13 was achieved in **377** episodes. It was a bit confusing to see that Dueling Double DQN wasn't the best one but I attribute it to the fact that I didn't do a hyperparameter search for the same and instead used the same hyperparameter setting. The plots of the rewards for the different variants of DQN is shown below:
+  The model achieved the reward of +13 in **352** episodes.The plots of the rewards vs episodes is given below:- 
+
+| DQN                                 |
+| ------------------------------------------ | 
+| ![dqn](scores.png) | 
 
 
-| Double DQN                                 | DQN                                | Dueling DQN                                         |
-| ------------------------------------------ | ---------------------------------- | --------------------------------------------------- |
-| ![double-dqn](results/ddqn_new_scores.png) | ![dqn](results/dqn_new_scores.png) | ![dueling double dqn](results/dddqn_new_scores.png) |
+ The X-axis denotes the episodes.
+ The Y-axis denotes the scores
 
 
 ## Ideas for improvement
 
+- Using Dueling DQN and Double DQN's would have shown improvements in model performance.
 - Using Prioritized Replay ([paper](https://arxiv.org/abs/1511.05952)) showed a massive improvement over Double DQNs for Atari games. It is expected that it'll lead to an improved performance here too.
 - Other improvements to the original DQN algorithms that were briefly mentioned in the course could be  potentially beneficial too: learning from [multi-step bootstrap targets](https://arxiv.org/abs/1602.01783) , [Distributional DQN](https://arxiv.org/abs/1707.06887), [Noisy DQN](https://arxiv.org/abs/1706.10295)
 - Hyperparameter search for both Double DQNs and Dueling Double DQNs should lead to better performance too.
