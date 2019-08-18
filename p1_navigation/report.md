@@ -25,7 +25,7 @@ To step back for a bit, the idea of Q-learning is to learn the action-value func
 
 
 
-![q-learning-update](images/q-learning.png)  
+![q-learning-update](q-learning.png)  
 
 
 
